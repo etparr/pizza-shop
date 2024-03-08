@@ -10,7 +10,7 @@ public class TextFilePizzaRepository implements PizzaRepository{
         PizzaStore pizzaStore = null;
         if(orderData.store().equalsIgnoreCase("chicago")) {
             pizzaStore = new ChicagoPizzaStore();
-        } else if (orderData.store().equalsIgnoreCase("chicago")) {
+        } else if (orderData.store().equalsIgnoreCase("new york")) {
             pizzaStore = new NewYorkPizzaStore();
         }
         Pizza pizza = pizzaStore.orderPizza(orderData.item());
